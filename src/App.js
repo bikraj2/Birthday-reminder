@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React, {useState}from 'react';
 import './App.css';
-
+import List from './component/list';
+import value from './data'
 function App() {
+  const [people,setPeople] = useState(value)
+  const clear  =()=>{
+    setPeople([])
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    <section className='container'>
+      <h2 className='today'>0 Birthdays Today</h2>
+        {people.map((item)=>{
+          return <List value={item}/>
+        })}
+        <button className='btn' onClick={clear}>Clear all</button>
+    </section>
+    </React.Fragment>
   );
 }
 
