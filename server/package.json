@@ -1,0 +1,18 @@
+{
+  "name": "birthday_reminder_api",
+  "version": "1.1.1",
+  "description": "Add your close one's birthday and get reminder of that birthday",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "author": "Bikraj Shrestha",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "nodemon": "^2.0.20"
+  }
+}
